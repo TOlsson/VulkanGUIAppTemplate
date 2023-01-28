@@ -26,7 +26,8 @@
                 "strategy": "external"
             },
             "cacheVariables": {
-                "CMAKE_BUILD_TYPE": "Debug"
+                "CMAKE_BUILD_TYPE": "Debug",
+                "WL_DEBUG": "ON"
             }
         },
         {
@@ -34,7 +35,8 @@
             "displayName": "x64 Release",
             "inherits": "x64-debug",
             "cacheVariables": {
-                "CMAKE_BUILD_TYPE": "Release"
+                "CMAKE_BUILD_TYPE": "Release",
+                "WL_RELEASE": "ON"
             }
         },
         {
@@ -46,7 +48,8 @@
                 "strategy": "external"
             },
             "cacheVariables": {
-                "CMAKE_BUILD_TYPE": "Debug"
+                "CMAKE_BUILD_TYPE": "Debug",
+                "WL_DEBUG": "ON"
             }
         },
         {
@@ -54,7 +57,34 @@
             "displayName": "x86 Release",
             "inherits": "x86-debug",
             "cacheVariables": {
-                "CMAKE_BUILD_TYPE": "Release"
+                "CMAKE_BUILD_TYPE": "Release",
+                "WL_RELEASE": "ON"
+            }
+        },
+        {
+            "name": "x64-dist",
+            "displayName": "x64 Dist",
+            "inherits": "windows-base",
+			      "architecture": {
+                "value": "x64",
+                "strategy": "external"
+            },
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release",
+                "WL_DIST": "ON"
+            }
+        },
+        {
+            "name": "x86-dist",
+            "displayName": "x86 Dist",
+            "inherits": "windows-base",
+            "architecture": {
+                "value": "x86",
+                "strategy": "external"
+            },
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release",
+                "WL_DIST": "ON"
             }
         }
     ]

@@ -2,11 +2,28 @@
 //
 
 #include "VulkanRenderer.h"
+#include "Entrypoint.h"
 
-using namespace std;
+#include "Image.h"
 
-int main()
+GUI::Application* GUI::CreateApplication(int argc, char** argv)
 {
-	cout << "Hello CMake." << endl;
-	return 0;
+  GUI::ApplicationSpecification spec;
+  spec.Name = "GUI Example";
+
+  GUI::Application* app = new GUI::Application(spec);
+  app->PushLayer<ExampleLayer>();
+  app->SetMenubarCallback([app]()
+    {
+      if (ImGui::BeginMenu("File"))
+      {
+        if (ImGui::MenuItem("Exit"))
+        {
+          app->Close();
+        }
+        ImGui::EndMenu();
+      }
+    });
+  return app;
 }
+

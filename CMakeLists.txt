@@ -3,7 +3,9 @@
 #
 cmake_minimum_required (VERSION 3.8)
 
-project ("VulkanRenderer")
+project ("VulkanRenderer" C CXX)
 
 # Include sub-projects.
 add_subdirectory ("VulkanRenderer")
+add_subdirectory ("GUI")
+add_subdirectory ("3pp")

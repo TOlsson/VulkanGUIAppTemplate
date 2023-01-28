@@ -1,0 +1,8 @@
+[submodule "3pp/glfw"]
+	path = 3pp/glfw
+	url = https://github.com/glfw/glfw
+	branch = 3.3-stable
+[submodule "3pp/imgui"]
+	path = 3pp/imgui
+	url = https://github.com/ocornut/imgui
+	branch = docking

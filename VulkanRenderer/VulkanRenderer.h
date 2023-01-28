@@ -1,8 +1,21 @@
-﻿// VulkanRenderer.h : Include file for standard system include files,
-// or project specific include files.
-
 #pragma once
 
-#include <iostream>
+#include "Application.h"
 
-// TODO: Reference additional headers your program requires here.
+class ExampleLayer : public GUI::Layer
+{
+public:
+  virtual void OnUIRender() override
+  {
+    ImGui::Begin("Hello");
+    ImGui::Button("Button");
+    ImGui::End();
+
+    ImGui::ShowDemoWindow();
+  }
+
+  virtual void OnUpdate(float ts)
+  {
+    
+  }
+};
